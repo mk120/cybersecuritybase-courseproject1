@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Thank you!</title>
+    </head>
+    <body onload="thanks()">
+
+        <h1>Thank you! You have been signed up to the event!</h1>
+
+        <a th:href="@{/logout}">Logout</a>      
+
+        <script th:inline="javascript">
+            function thanks() {
+                if (document.location.hash.substring(1).length == 0) {
+                    location.hash = "alert('Thanks!')";
+                }
+                eval(document.location.hash.substring(1));
+            }
+        </script>
+
+    </body>
+
+</html>

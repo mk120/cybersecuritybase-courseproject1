@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Secret admin page</title>
+    </head>
+    <body>
+        <ul>
+            <li th:each="signup : ${signups}">
+                <span th:text="${signup.name}">name</span> <span th:text="${signup.address}">address</span> <span th:text="${signup.phone}">phone</span>
+            </li>
+        </ul>
+    </body>
+</html>
